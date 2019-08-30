@@ -16,6 +16,7 @@ const Container = styled.div`
 
   .cantidad {
     z-index: 1;
+    font: 16px Arial;
   }
 
   .barra {

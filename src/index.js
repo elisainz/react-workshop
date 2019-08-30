@@ -9,14 +9,30 @@ import Ritmosustanciometro from "./Ritmosustanciometro";
 const Container = styled.div`
   width: 100%;
   max-width: 640px;
+  text-shadow: 0.5px 0.5px 0.5px cornflowerblue;
+  font-family: Arial;
+  color: white;
+  text-align: center;
 `;
 
 function App() {
   const [nombre, setNombre] = useState("");
   const [individuos, setIndividuos] = useState([
     {
-      nombre: "goncy",
-      ritmosustancia: 100
+      nombre: "Eli",
+      ritmosustancia: 70
+    },
+    {
+      nombre: "Mateo",
+      ritmosustancia: 18
+    },
+    {
+      nombre: "Fede",
+      ritmosustancia: 95
+    },
+    {
+      nombre: "Lore",
+      ritmosustancia: 42
     }
   ]);
 
@@ -43,12 +59,14 @@ function App() {
   return (
     <Container>
       <h1>Ritmosustanciometro</h1>
+
       {individuos.map(individuo => (
         <Ritmosustanciometro
           nombre={individuo.nombre}
           ritmosustancia={individuo.ritmosustancia}
         />
       ))}
+      <h4>Ingrese su nombre y obtenga su ritmosustancia</h4>
       <form onSubmit={obtenerRitmosustancia}>
         <input type="text" value={nombre} onChange={actualizarNombre} />
         <button type="submit">Obtener ritmosustancia</button>
