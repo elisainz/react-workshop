@@ -1,0 +1,11 @@
+html,
+body,
+#root {
+  font-family: sans-serif;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex: 1;
+  margin: 0;
+  padding: 0;
+}
